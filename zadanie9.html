@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fcb.png">
+    <title>FC Barcelona</title>
+    <style>
+        @font-face {
+            font-family: hand;
+            src: url(AlexBrush-Regular.ttf);
+        }
+
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(70deg, red, blue);
+            height: 10vw;
+            color: white;
+        }
+
+        header img {
+            width: 8vw;
+            float: left;
+            margin-left: 10vw;
+            margin-top: 1vw;
+        }
+
+        header h1 {
+            float: left;
+            font-style: bold;
+            margin-left: 17vw;
+            font-size: 2vw;
+            margin-top: 3.5vw;
+        }
+
+        header ul#menu {
+            list-style-type: none;
+            float: right;
+            display: flex;
+            margin-right: 2vw;
+            margin-top: 1.7vw;
+        }
+
+        header ul#menu li a {
+            margin-right: 2vw;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            width: 6vw;
+            height: 7vw;
+            padding: 1vw;
+            border-radius: 5px;
+        }
+
+        header ul#menu> li >a:hover {
+            background-color: darkblue;
+            color: yellow;
+            border: 3px solid red;
+        }
+        ul#menu li:hover ul {
+  display: block;
+}
+
+ul#menu li ul {
+  display: none;
+  position: absolute;
+  right: 10vw;
+  top: 3.6vw;
+  min-width: 100px;
+  z-index: 1;
+}
+
+ul#menu li ul li {
+  display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+ul#menu li ul li:hover {
+  background-color: #00000060;
+}
+
+        ul.okruszki {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: darkblue;
+            color: antiquewhite;
+            margin: 0px;
+        }
+
+
+        ul.okruszki li {
+            display: inline;
+            font-size: 18px;
+            color: antiquewhite;
+        }
+
+
+        ul.okruszki li+li:before {
+            padding: 8px;
+            color: antiquewhite;
+            content: "/\00a0";
+        }
+
+
+        ul.okruszki li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+
+        ul.okruszki li a:hover {
+            color: darkviolet;
+            text-decoration: underline;
+        }
+
+        #content {
+            height: 1000px
+        }
+
+        #sidebar {
+            height: 52.988738vw;
+            width: 26vw;
+            font-size: 18px;
+            float: left;
+            background-image: url(img/kibice.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        #sidebar h1 {
+            margin: 0px;
+            text-align: center;
+            margin-top: 15px;
+            color: yellow;
+            margin-bottom: 2vw;
+        }
+
+        #sidebar h1,
+        section {
+            margin-left: 20px;
+        }
+
+        #sidebar section {
+            letter-spacing: 4;
+            margin-bottom: 30px;
+            background-color: #00000099;
+            border-radius: 2vw;
+            padding: 1vw;
+            margin-right: 2vw;
+            margin-bottom: 1vw;
+        }
+
+        .polecane {
+            height: 25.97vw;
+            float: left;
+            width: 73.1vw;
+            background-image: url(img/stadion2.jpg);
+            color: white;
+        }
+
+        .polecane h1 {
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        .polecane article {
+            display: flex;
+        }
+
+        .polecane article section {
+            margin-top: 2vw;
+            height: 17vw;
+            font-size: 1vw;
+            padding-top: 1vw;
+            background-color: #00000060;
+            text-align: left;
+            border-radius: 2.2vw;
+            padding: 1vw;
+            margin-right: 10px;
+            padding-bottom: 0.5vw;
+        }
+
+        .ostatnie_wpisy {
+            width: 73.1vw;
+            height: 27vw;
+            float: left;
+            background-image: url(img/trawa.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        .ostatnie_wpisy h1 {
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        .ostatnie_wpisy article {
+            display: flex;
+        }
+
+        .ostatnie_wpisy section {
+            margin-top: 2vw;
+            height: 16vw;
+            padding: 1vw;
+            background-color: #00000060;
+            text-align: left;
+            border-radius: 3vw;
+            margin-right: 10px;
+            font-size: 1vw;
+            padding-bottom: 0.5vw;
+        }
+
+        footer ul {
+            list-style-type: none;
+            float: right;
+            display: flex;
+            margin: 0;
+            margin-right: 2vw;
+        }
+
+        footer p {
+            display: block;
+            width: 7vw;
+            margin-left: 6vw;
+        }
+
+        FOOTER {
+            background-color: #00000099;
+            height: 2vw;
+            padding-top: 0.3vw;
+            margin-top: 1px;
+
+        }
+
+        .ostatnie_wpisy .o2 img {
+            width: 10vw;
+
+        }
+
+        .ostatnie_wpisy section.o2 {
+            padding: 1vw;
+        }
+
+        .ostatnie_wpisy .o3 img {
+            width: 9.85vw;
+
+        }
+
+        .ostatnie_wpisy section.o3 {
+            padding: 1vw;
+        }
+
+        .ostatnie_wpisy .o1 {
+            padding-bottom: 0.1vw;
+            height: 325px;
+        }
+
+        div.visca {
+            position: absolute;
+            right: 5vw;
+            top: 65.3vw;
+            font-family: hand;
+            font-size: 1vw;
+            font-style: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo">
+        <h1> Polski Fanclub FC Barcelony</h1>
+        <ul id="menu">
+            <li><a href="#"> Dom</a></li>
+            <li><a href="#">Zdjęcia</a>
+                <ul id="podmenu">
+                    <li><a href="https://www.fcbarcelona.com/photo-resources/2021/08/09/276ad270-e5c6-453d-8d9f-212417ad7cb3/Camp-Nou-3.jpg?width=1200&height=750">Stadion</a></li>
+                    <li><a href="https://i.ytimg.com/vi/ZFxijNh8sd8/maxresdefault.jpg">Piłkarze</a></li>
+                    <li><a href="https://poloniabarcelona.pl/wp-content/uploads/2012/07/xfcb-620x388.jpg.pagespeed.ic.8JFelbM-I9@2x.jpg">Herb</a></li>
+                    <li><a href="https://portalkomunalny.pl/wp-content/uploads/2017/08/smieci-wysypisko.jpg">Real Madryt</a></li>
+                    <li><a href="https://phantom-marca.unidadeditorial.es/807768410bf38cef8c62db11633a991f/assets/multimedia/imagenes/2021/12/25/16404369280366.jpg">Rodzina Araújo</a></li>
+                    <li><a href="https://pbs.twimg.com/media/FYcJfb3VQAEkYpv.jpg">Psy Araújo</a></li>
+
+
+                </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+
+    </header>
+    <nav>
+        <ul class="okruszki">
+            <li><a href="#">Dom</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Zdjęcia</a></li>
+            <li>Kontakt</li>
+        </ul>
+    </nav>
+    <div id="content">
+        <div id="sidebar">
+            <h1>Najczęściej czytane artykuły</h1>
+            <section class="s1">
+                <h3>NoobMaster68</h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati assumenda modi
+                eos
+                ad, vel inventore voluptatibus illo totam maxime nesciunt veritatis autem provident amet dicta impedit
+                minima doloribus. Repellat consectetur harum quibusdam eligendi corporis. Quasi eum enim ipsa
+                perferendis animi atque iusto dolor temporibus tempore nulla harum officia nostrum, quod quis eos at
+                laborum distinctio cupiditate optio amet voluptatum deleniti.
+            </section>
+            <section class="s2">
+                <h3>AndrewLate2137</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, totam ad.
+                Officia,
+                architecto? Laboriosam, consequuntur temporibus architecto quasi nisi nihil dignissimos iusto tempora
+                obcaecati accusamus eligendi, sit debitis sapiente odit eaque similique! Assumenda ex unde, minima,
+                delectus officia itaque provident natus praesentium laborum dolores velit cupiditate libero eos. Libero,
+                illum!
+            </section>
+            <section class="s3">
+                <h3>kanyewestlover</h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad rerum sed eaque
+                veritatis
+                nisi! Ab sunt dolores atque sapiente earum, ipsa alias placeat repudiandae nostrum, harum quia. Hic,
+                impedit aut!
+            </section>
+
+        </div>
+        <div class="polecane">
+            <h1>Polecane Artykuły</h1>
+            <br>
+            <article>
+                <section class="p1">
+                    <h3>FilipDembele17</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam autem quis
+                    ipsum,
+                    minus
+                    et officia obcaecati ratione doloremque amet temporibus, quam facere. Maxime et tempora quidem
+                    similique
+                    explicabo voluptas blanditiis.
+                </section>
+                <section class="p2">
+                    <h3>Gig_Aniga</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magni
+                    neque
+                    quidem culpa. Aspernatur, enim voluptates. Nesciunt quasi sunt cumque itaque dolor consectetur optio
+                    ex
+                    adipisci aperiam, ducimus aliquid quaerat alias, assumenda sit repudiandae eaque, neque quis minima?
+                </section>
+                <section class="p3">
+                    <h3>KlimekGriffin</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a accusamus
+                    doloribus,
+                    iusto facilis fuga laudantium ipsum esse minus at assumenda similique sunt culpa voluptatem
+                    incidunt.
+                </section>
+                <section class="p4">
+                    <h3>ChrisBush</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea minima vero, itaque
+                    voluptatibus modi distinctio fuga eveniet quaerat error, ipsum rerum sunt! Rerum culpa incidunt
+                    magni
+                    natus nobis odio nam ullam quas ratione! Architecto enim maxime ea nemo, inventore eum excepturi
+                    tempore
+                    rerum.
+                </section>
+            </article>
+        </div>
+        <div class="ostatnie_wpisy">
+            <h1>Ostatnie wpisy z blogów</h1>
+            <article>
+                <section class="o1">
+                    <h3>Vardryt</h3>
+                    <img src="img/vardryt.jpg " alt="vardryt">
+                </section>
+                <section class="o2"> Penaldo ghosting in the camel league lmao 🤣🤣🤣:
+                    <SPAN></SPAN>
+                    <img src="img/penaldo.png" alt="penaldo">
+                </section>
+                <section class="o3">Vinicius Jr shows Neymar how it's done:
+                    <br>
+                    <img src="img/vini.jpg" alt="vini">
+                </section>
+                <section class="o4">
+                    <h3>RealMadridOldestSupporter_2012: </h3>
+                    <img src="img/fanreal.jpg" alt="fanreal">
+                </section>
+            </article>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Copyright 2012</p>
+    </footer>
+    <div class="visca">Visca el Barca, visca el Catalunya!</div>
+</body>
+
+</html>
